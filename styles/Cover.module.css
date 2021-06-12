@@ -1,0 +1,127 @@
+
+.cover{
+    width: 280px;
+    height: 308px;
+    border-radius: 66px;
+    background-image : url('../public/images/3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    box-shadow:  20px 20px 20px #242725,
+    -20px -20px 20px #3e4341;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+    height: 80%;
+}
+
+.controls{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.controls button{
+    display:block;
+    margin: 0 ;
+    border-radius: 50%;
+    border: none;
+    width: 60px;
+    height: 60px;
+}
+.controls svg{
+    width: 23px;
+    height: 23px;
+}
+
+/* Down Button */
+.controls button:nth-child(1){
+    margin: 0 ;
+    padding: 0;
+    background: none;
+    color: white;
+    border: none;
+    height: 30px;
+    width: 30px;
+    align-self: center;
+}
+
+/* Pre Button */
+.controls button:nth-child(2){
+    margin: 0 0 0 32px ;
+    padding: 0;
+    background: none;
+    color: white;
+    border: none;
+    
+}
+
+/* Play and Pause Button */
+.controls button:nth-child(3){
+    margin: 0 13px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+}
+
+.controls button:nth-child(3) svg{
+    width: 30px;
+    height: 30px;
+}
+
+/* Next Button */
+.controls button:nth-child(4){
+    margin: 0 32px 0 0;
+    padding: 0;
+    background: none;
+    color: white;
+    border: none;
+}
+.controls button:nth-child(4) svg{
+    transform: rotate(180deg);
+}
+
+/* Shuffle Button */
+.controls button:nth-child(5){
+    margin: 0 ;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    align-self: center;
+    border: none;
+}
+.controls button:nth-child(5) svg{
+    vertical-align: text-top;
+    width: 22px;
+    height: 22px;
+}
+
+.container img{
+    display: none;
+}
+
+
+
+
+
+
+
