@@ -118,6 +118,7 @@ export default function Home() {
         load()
       }else{
         sound.play()
+        progress()
       }
       setPreSound(sound)
       console.log('palying')
@@ -133,9 +134,10 @@ export default function Home() {
           var a = ( (sound.getOutput().context.currentTime - startTime) / 133 ) * 100
           overlay.style.width =  a + "%"
 
+          
           if(!sound.isPlaying){
             cancelAnimationFrame(frameId)
-            overlay.style.width =  100 + "%"
+            // overlay.style.width =  100 + "%"
             setIsplaying(false)
             pause()
             return
