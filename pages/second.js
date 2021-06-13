@@ -30,8 +30,9 @@ export default function second() {
       if( image.complete){
         console.log(image.getAttribute('src'))
         Grade(document.querySelectorAll('.gradient-wrap'))
+        setIsGradientSet(true)
       } 
-      setIsGradientSet(true)
+      
     }
     
 
