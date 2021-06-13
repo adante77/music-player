@@ -19,16 +19,19 @@ export default function second() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   
+  const [isGradientSet, setIsGradientSet] = useState(false)
+  
 
   useEffect(() => {
     setIsBrowser(true)
 
-    if(document.getElementsByTagName('img').length !=0){
+    if(document.getElementsByTagName('img').length !=0 &&  !isGradientSet){
       var image = document.getElementById('gradient')
       if( image.complete){
-        console.log(55)
+        console.log(image.getAttribute('src'))
         Grade(document.querySelectorAll('.gradient-wrap'))
       } 
+      setIsGradientSet(true)
     }
     
 
