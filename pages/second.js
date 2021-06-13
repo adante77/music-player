@@ -23,7 +23,7 @@ export default function second() {
   useEffect(() => {
     setIsBrowser(true)
 
-    Grade(document.querySelectorAll('.gradient-wrap'))
+    
 
     const set = () =>{
       var wavesurfer = Wavesurfer[0].create({
@@ -61,6 +61,7 @@ export default function second() {
       var temp =  require('wavesurfer.js')
       Wavesurfer.push(temp)
       setIsWaveCreate(true)
+      Grade(document.querySelectorAll('.gradient-wrap'))
     }
     
 
