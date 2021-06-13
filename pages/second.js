@@ -22,7 +22,7 @@ export default function second() {
   useEffect(() => {
     setIsBrowser(true)
 
-    Grade(document.querySelectorAll('.gradient-wrap'))
+    // Grade(document.querySelectorAll('.gradient-wrap'))
 
     const set = () =>{
       var wavesurfer = Wavesurfer[0].create({
