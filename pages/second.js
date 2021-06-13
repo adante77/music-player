@@ -90,7 +90,7 @@ export default function second() {
     return (
       <div  className= {`${style.container} gradient-wrap`} >
 
-          <img src='/images/1.jpg' />
+          <img src='/images/1.jpg' crossorigin="Anonymous"/>
           
           <div className={style.box}> 
 
