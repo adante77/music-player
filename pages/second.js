@@ -33,7 +33,7 @@ export default function second() {
       hideScrollbar : true,
       cursorWidth :0,
       barHeight: 1 ,
-      barMinHeight:1.4,
+      barMinHeight:1,
       responsive : true
       });
       wavesurfer.load('/sound/PorUnaCabeza');
