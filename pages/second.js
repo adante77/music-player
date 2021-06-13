@@ -17,6 +17,7 @@ export default function second() {
   const [isWaveCreate, setIsWaveCreate] = useState(false)
   const [wavesurfer, setwavesurfer] = useState(null)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false)
 
 
   useEffect(() => {
@@ -37,6 +38,10 @@ export default function second() {
       responsive : true
       });
       wavesurfer.load('/sound/PorUnaCabeza');
+      wavesurfer.on('ready', function () {
+        setIsLoaded(true)
+    });
+
       setwavesurfer(wavesurfer)
     }
     
@@ -102,7 +107,7 @@ export default function second() {
                   <GiPreviousButton />
                 </button>
 
-                <button id="play" onClick={playpause} > 
+                <button id="play" onClick={isLoaded ? playpause : null} > 
                 {isPlaying  ?  <BsPauseFill /> : <BsFillPlayFill/>  }
                 </button>
 
