@@ -28,6 +28,7 @@ export default function second() {
     if(document.getElementsByTagName('img').length !=0 &&  !isGradientSet){
       var image = document.getElementById('gradient')
       if( image.complete){
+
         // Save image to localStorage
         //var imgData = getBase64Image(image);
        // window.localStorage.setItem(image.getAttribute('src'), imgData);
@@ -93,7 +94,7 @@ export default function second() {
     }
 
     const pause = ()=>{
-      wavesurfer.load('http://https://music-player-tau.vercel.app/images/1.jpg');
+      wavesurfer.load('/sound/1');
     }
 
 
