@@ -29,10 +29,6 @@ export default function second() {
       var image = document.getElementById('gradient')
       if( image.complete){
 
-        // Save image to localStorage
-        //var imgData = getBase64Image(image);
-       // window.localStorage.setItem(image.getAttribute('src'), imgData);
-
         Grade(document.querySelectorAll('.gradient-wrap'))
         setIsGradientSet(true)
       } 
@@ -101,7 +97,7 @@ export default function second() {
     return (
       <div  className= {`${style.container} gradient-wrap`} >
 
-          <img id='gradient' src='/images/1.jpg' crossOrigin="Anonymous"/>
+          <img id='gradient' src='https://res.cloudinary.com/dgpt2sh2g/image/upload/v1622635565/thumbnail_event1_26ffe9d150.jpg' crossOrigin="Anonymous"/>
           
           <div className={style.box}> 
 
