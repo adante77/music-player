@@ -1,5 +1,4 @@
 import {useState , useEffect} from 'react'
-import styles from '../styles/Cover.module.css'
 import style from '../styles/Second.module.css'
 import Grade from 'grade-js'
 import {BsPauseFill , BsFillPlayFill } from 'react-icons/bs'
@@ -23,6 +22,8 @@ export default function second() {
   useEffect(() => {
     setIsBrowser(true)
 
+    Grade(document.querySelectorAll('.gradient-wrap'))
+
     const set = () =>{
       var wavesurfer = Wavesurfer[0].create({
       container: '#waveform',
@@ -31,9 +32,9 @@ export default function second() {
       barRadius : 10,
       hideScrollbar : true,
       cursorWidth :0,
-      barHeight: 1.4 ,
-      barMinHeight:1.4
-      
+      barHeight: 1 ,
+      barMinHeight:1.4,
+      responsive : true
       });
       wavesurfer.load('/sound/PorUnaCabeza');
       setwavesurfer(wavesurfer)
@@ -74,22 +75,25 @@ export default function second() {
     }
 
     const pause = ()=>{
-      wavesurfer.pause()
+      wavesurfer.load('/sound/1');
     }
 
 
     return (
-      <div  className= {styles.container} >
-          <div className={styles.box}> 
-            {/* Cover */}
-            <div className ={styles.cover}></div>
+      <div  className= {`${style.container} gradient-wrap`} >
 
-            <div id="waveform" className={style.wave}>
-              
-            </div>
+          <img src='/images/1.jpg'/>
+          
+          <div className={style.box}> 
+
+            {/* Cover */}
+            <div className ={style.cover}></div>
+
+            {/* Visualizer */}
+            <div id="waveform" className={style.wave}></div>
 
             {/* Controls */}
-            <div className= {styles.controls} >
+            <div className= {style.controls} >
 
                 <button id="down" onClick={time} >
                   <FiChevronDown/>
