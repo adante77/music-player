@@ -63,45 +63,6 @@ export default function Home() {
     const analyser = () =>{
       const analyser = new THREE.AudioAnalyser( sound , 256 ) ;
       progress()
-      //setPreAnalyser(analyser)
-
-      // var canvas = document.getElementById("canvas");
-      //   canvas.width = 300;
-      //   canvas.height = 200;
-      //   var bufferLength = 128;
-      //   var ctx = canvas.getContext("2d");
-      //   var WIDTH = canvas.width;
-      //   var HEIGHT = canvas.height;
-
-      //   var barWidth = (WIDTH / bufferLength) * 2.5;
-      //   var barHeight;
-      //   var x = 0;
-      //   function renderFrame() {
-
-      //     requestAnimationFrame(renderFrame);
-    
-      //     x = 0;
-    
-      //     var dataArray = analyser.getFrequencyData()
-    
-      //     ctx.fillStyle = "#313533";
-      //     ctx.fillRect(0, 0, WIDTH, HEIGHT);
-
-    
-      //     for (var i = 0; i < bufferLength; i++) {
-      //       barHeight = dataArray[i];
-            
-      //       var r = barHeight + (25 * (i/bufferLength));
-      //       var g = 250 * (i/bufferLength);
-      //       var b = 50;
-    
-      //       ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
-      //       ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
-    
-      //       x += barWidth + 1;
-      //     }
-      //   }
-      //   renderFrame();
       } 
 
 
