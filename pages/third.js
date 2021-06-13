@@ -29,7 +29,7 @@ export default function second() {
       var image = document.getElementById('gradient')
       if( image.complete){
         console.log(image.getAttribute('src'))
-        //Grade(document.querySelectorAll('.gradient-wrap'))
+        Grade(document.querySelectorAll('.gradient-wrap'))
         setIsGradientSet(true)
       } 
       
