@@ -24,7 +24,7 @@ export default function second() {
     setIsBrowser(true)
 
     if(document.getElementsByTagName('img').length !=0){
-      console.log(55)
+      console.log(document.getElementsByTagName('img').length )
       Grade(document.querySelectorAll('.gradient-wrap'))
     }
     
