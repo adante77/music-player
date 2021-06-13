@@ -18,11 +18,14 @@ export default function second() {
   const [wavesurfer, setwavesurfer] = useState(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
-
+  
 
   useEffect(() => {
     setIsBrowser(true)
 
+    if(document.getElementsByTagName('img').length !=0){
+      Grade(document.querySelectorAll('.gradient-wrap'))
+    }
     
 
     const set = () =>{
@@ -61,7 +64,6 @@ export default function second() {
       var temp =  require('wavesurfer.js')
       Wavesurfer.push(temp)
       setIsWaveCreate(true)
-      Grade(document.querySelectorAll('.gradient-wrap'))
     }
     
 
