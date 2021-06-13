@@ -24,6 +24,7 @@ export default function second() {
     setIsBrowser(true)
 
     if(document.getElementsByTagName('img').length !=0){
+      console.log(55)
       Grade(document.querySelectorAll('.gradient-wrap'))
     }
     
@@ -89,7 +90,7 @@ export default function second() {
     return (
       <div  className= {`${style.container} gradient-wrap`} >
 
-          <img src='/images/1.jpg' crossorigin="Anonymous"/>
+          <img src='/images/1.jpg' />
           
           <div className={style.box}> 
 
