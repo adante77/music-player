@@ -1,6 +1,6 @@
 import {useState , useEffect} from 'react'
 import style from '../styles/Second.module.css'
-import Grade from 'grade-js'
+// import Grade from 'grade-js'
 import {BsPauseFill , BsFillPlayFill } from 'react-icons/bs'
 import {GiPreviousButton} from 'react-icons/gi'
 import {TiArrowShuffle} from 'react-icons/ti'
@@ -22,7 +22,7 @@ export default function second() {
   useEffect(() => {
     setIsBrowser(true)
 
-    Grade(document.querySelectorAll('.gradient-wrap'))
+    // Grade(document.querySelectorAll('.gradient-wrap'))
 
     const set = () =>{
       var wavesurfer = Wavesurfer[0].create({
@@ -81,7 +81,7 @@ export default function second() {
     return (
       <div  className= {`${style.container} gradient-wrap`} >
 
-          <img src='/images/1.jpg'/>
+          {/* <img src='/images/1.jpg'/> */}
           
           <div className={style.box}> 
 
