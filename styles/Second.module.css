@@ -121,7 +121,8 @@
 
 .container img{
     display: none;
-    width: 5px;
+    width: 100%;
+    height: 100%;
 }
 
 
