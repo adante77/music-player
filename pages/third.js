@@ -41,15 +41,18 @@ export default function second() {
       container: '#waveform',
       waveColor: 'white',
       progressColor: 'aquamarine',
-      barRadius : 10,
+      barRadius : 12,
+      height:65,
       hideScrollbar : true,
       cursorWidth :0,
-      barHeight: 1 ,
-      barMinHeight:1,
-      responsive : true
+      normalize:true,
+      pixelRatio:1,
+      
+      responsive : true,
       });
-      wavesurfer.load('/sound/PorUnaCabeza');
-      wavesurfer.on('ready', function () {
+      wavesurfer.load('/sound/PorUnaCabeza' )
+        wavesurfer.on('ready', function () {
+        //console.log(JSON.stringify(wavesurfer.backend.getPeaks(512) ))
         setIsLoaded(true)
     });
 
@@ -90,7 +93,15 @@ export default function second() {
     }
 
     const pause = ()=>{
-      wavesurfer.load('/sound/1');
+      wavesurfer.load('/sound/1')
+    }
+
+
+    const soundUpload = (e)=>{
+      if( e.target.files[0] != null){
+        setIsPlaying(false)
+        wavesurfer.load(URL.createObjectURL(e.target.files[0]))
+      }
     }
 
 
@@ -110,9 +121,13 @@ export default function second() {
             {/* Controls */}
             <div className= {style.controls} >
 
-                <button id="down" onClick={time} >
-                  <FiChevronDown/>
-                </button>
+                <div id="down" onClick={time} >
+                  <label htmlFor="file-input">
+                    <FiChevronDown/>
+                  </label>
+                  <input id='file-input' type='file' onChange={soundUpload}/>
+                  
+                </div>
 
                 <button id="prev"  > 
                   <GiPreviousButton />
